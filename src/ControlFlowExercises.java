@@ -40,6 +40,13 @@ public class ControlFlowExercises {
 //            }
 //        } while(i >= -10);
 
+        //hungs
+//        int x = 100;
+//        do {
+//            System.out.println(x);
+//            x -= 5;
+//        } while(x >= -10);
+
 
 
         //Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000. Output should equal:
@@ -53,6 +60,18 @@ public class ControlFlowExercises {
 //            i *= i;
 //            System.out.println(i);
 //        } while(i < 65536);
+
+        //hungs
+//        int x = 2;
+//        do {
+//            System.out.println(x);
+//            x = (int) Math.pow(x, 2);
+//        } while(x < 1000000);
+
+        //hungs
+//        for(int i = 2; i < 100000; i = (int) Math.pow(i,2)){
+//            System.out.println(i);
+//        }
 
 //-----------------------------------------------------------------------------
         //1c Refactor the previous two exercises to use a for loop instead.
@@ -107,14 +126,21 @@ public class ControlFlowExercises {
         System.out.println("Would you like to continue? [y/n]");
         String confirm = scanner.next();
 
-        if (confirm.equals("y")){
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
+        for(int i = lowInt; i <= highInt; i++){
+            int squaredInput = (int) Math.pow(i, 2);
+            int cubedInput = (int) Math.pow(i, 3);
 
-            System.out.println("------ | ------- | -----");
-        } else {
-            System.out.println("okay then...");
+            if (confirm.equals("y")){
+                System.out.println("number | squared | cubed");
+                System.out.println("------ | ------- | -----");
+
+                System.out.printf("\n%d     | %d      | %d    \n", i, squaredInput, cubedInput);
+            } else {
+                System.out.println("okay then...");
+            }
         }
+
+
 
 
 
