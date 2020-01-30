@@ -80,11 +80,11 @@ public class MethodsExercises {
             return answer;
     }
 
-    public static int getIntergerR(int min, int max){
-            int answer;
-            Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a number between " + min + " and " + max + ": ");
-    }
+//    public static int getIntergerR(int min, int max){
+//            int answer;
+//            Scanner scan = new Scanner(System.in);
+//        System.out.println("Enter a number between " + min + " and " + max + ": ");
+//    }
 //-------------------------------------------------------------------------
 
     //3 Calculate the factorial of a number.
@@ -150,7 +150,7 @@ public class MethodsExercises {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("How many sides does this each die have?: ");
 //        int numberSides =
-int randoNum = (int)  Math.ceil(100 * java.lang.Math.random());
+//int randoNum = (int)  Math.ceil(100 * java.lang.Math.random());
 //    }
 
     public static int rollDice(){
@@ -165,7 +165,7 @@ int randoNum = (int)  Math.ceil(100 * java.lang.Math.random());
                 numSides = getInteger(2,21);
                 dice1 = (int) Math.round(Math.floor(Math.random() * numSides + 1));
                 dice2 = (int) Math.round(Math.floor(Math.random() * numSides + 1));
-                System.out.printf("%d + %d = %d\n", dice1, dice2, total);
+                System.out.printf("You rolled a %d and a %d for a total of %d\n", dice1, dice2, total);
                 System.out.println("Would you like to roll again? [y/n]");
                 String answer = scan.next();
                 if(answer.equalsIgnoreCase("n")){
