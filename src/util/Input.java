@@ -17,13 +17,20 @@ public class Input {
         //runthrough
         return userString;
     }
-    public boolean yesNo(){
-        System.out.println("yes or no?");
-        scanner = new Scanner(System.in);
-        String userAnswer = scanner.next();
-        if (userAnswer.equalsIgnoreCase("yes") || userAnswer.equalsIgnoreCase("y"))
-        return true; else {return false;}
+
+    public String getString(String prompt){
+        System.out.println(prompt);
+        String userString = this.scanner.next();
+        return userString;
     }
+
+    public boolean yesNo(){
+        String answer;
+        System.out.println("What is your answer? [yes/no]");
+        answer = this.scanner.next();
+        return (answer.startsWith("y"));
+    }
+
     public int getInt(int min, int max){
         System.out.println("Enter a number between " + min + " and " + max + ": ");
         int userInput = this.scanner.nextInt();
@@ -57,6 +64,7 @@ public class Input {
         double userInput = this.scanner.nextDouble();
         return userInput;
     }
+
 
 
 }
