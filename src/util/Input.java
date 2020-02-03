@@ -24,9 +24,9 @@ public class Input {
         return userString;
     }
 
-    public boolean yesNo(){
+    public boolean yesNo(String prompt){
         String answer;
-        System.out.println("What is your answer? [yes/no]");
+        System.out.println(prompt);
         answer = this.scanner.next();
         return (answer.startsWith("y"));
     }
@@ -59,8 +59,8 @@ public class Input {
         return userInput;
     }
 
-    public double getDouble(){
-        System.out.println("Enter a number: ");
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         double userInput = this.scanner.nextDouble();
         return userInput;
     }
