@@ -2,12 +2,15 @@ package movies;
 import java.util.Scanner;
 
 public class MoviesApplication {
-
+//hung said to create methods for all the case statements
+    //create if statements
+    //do not use recursion
     public static void main(String[] args){
-        chooseMovies();
-    }
+        MoviesArray movieCall = new MoviesArray();
+        movieCall.findAll();
+        caseOne(movieCall);
 
-    public static void chooseMovies(){
+
         System.out.println("What would you like to do?\n" +
                 "\n" +
                 "0 - exit\n" +
@@ -19,14 +22,29 @@ public class MoviesApplication {
                 "\n" +
                 "Enter your choice: ");
 
+        chooseMovies();
+    }
+
+    public static void caseOne(MoviesArray movieCall){
+        for(Movie movie : movieCall.findAll()){
+            System.out.printf("%s --- %s\n", movie.getName(), movie.getCategory());
+        }
+    }
+
+
+
+    public static void chooseMovies(){
+
         Scanner scanner = new Scanner(System.in);
         int userChoice = scanner.nextInt();
 
         switch (userChoice) {
             case 0:
+                // Exit program function
                 System.out.println("You chose to exit.");
                 break;
             case 1:
+                // Display all movie function
                 System.out.println("You chose to view all movies.");
 
                 System.out.println("\n" + "Would you like to view another category? [y/n]");

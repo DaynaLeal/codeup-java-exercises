@@ -14,6 +14,14 @@ public class Movie {
         this.name = name;
         this.category = category;
     }
+
+    public String getName() {
+        return this.name;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
     //returns persons name
     public String[] getMovie(){
         String[] movieInfo = {this.name, this.category};
