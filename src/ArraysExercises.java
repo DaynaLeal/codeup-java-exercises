@@ -24,8 +24,7 @@ public class ArraysExercises {
         }
 
         addPerson(people, charlie);
-        //---------------------------------------------------------------------------
-        //exercise 2: server name generator
+
     }
 
     //exercise 1:
@@ -37,6 +36,4 @@ public class ArraysExercises {
         }
 //        return personCopyArray;
     }
-    //---------------------------------------------------------------------------
-    //exercise 2: Server name generator
 }
