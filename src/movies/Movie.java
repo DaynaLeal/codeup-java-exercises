@@ -22,9 +22,4 @@ public class Movie {
         return this.category;
     }
 
-    //returns persons name
-    public String[] getMovie(){
-        String[] movieInfo = {this.name, this.category};
-        return movieInfo;
-    }
 }

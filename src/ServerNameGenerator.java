@@ -10,7 +10,7 @@ public class ServerNameGenerator {
     }
 
     public static String randomElement(String[] word){
-        int randomIndex = (int) Math.floor(Math.random() * 9); //random number between 1-10
+        int randomIndex = (int) Math.floor(Math.random() * 10); //random number between 1-10
         return word[randomIndex];
     }
 }
