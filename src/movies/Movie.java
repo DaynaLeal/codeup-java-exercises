@@ -14,7 +14,6 @@ public class Movie {
         this.name = name;
         this.category = category;
     }
-
     public String getName() {
         return this.name;
     }
