@@ -26,10 +26,12 @@ public class Rectangle extends Quadrilateral implements Measurable{
         this.width = width;
     }
 
-//    @Override
-//    public double getPerimeter() {
-//        return (length * 2) + (width * 2);
-//    }
+    //Why does the code fail to compile if you leave off the getPerimeter method in Rectangle?
+    //if this is commented out then this class pops an error because each of these methods must be overridden since they are declared as abstract methods in the Quadrilateral (parent)
+    @Override
+    public double getPerimeter() {
+        return (length * 2) + (width * 2);
+    }
 
     @Override
     public double getArea() {
