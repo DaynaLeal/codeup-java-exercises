@@ -5,13 +5,14 @@ public class Square extends Rectangle {
 
     public Square(int side){
         super(side, side);
+        this.side = side;
     }
 
-    public static int getArea(int side){
-        return side * ;
+    public int getArea(){
+        return side * side;
     }
 
-    public static int getPerimeter(int side){
+    public int getPerimeter(){
         return (4 * side);
     }
 }
