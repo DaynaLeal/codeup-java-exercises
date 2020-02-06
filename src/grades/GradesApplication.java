@@ -23,7 +23,7 @@ public class GradesApplication {
 
         HashMap<String, Student> students = new HashMap<>();
         students.put("DaynaL", dayna);
-        students.put("BriVillaN", bri);
+        students.put("BriVN", bri);
         students.put("ChrisC", chris);
 
 
@@ -39,15 +39,15 @@ public class GradesApplication {
                 System.out.println(
                         "\nWhat student would you like to see more information on?\n" +
                         "\n" +
-                        "DaynaLeal\n" +
-                        "BriVillaN\n" +
-                        "ChrisCyr\n");
+                        "DaynaL\n" +
+                        "BriVN\n" +
+                        "ChrisC\n");
                 String userChoice = scanner.nextLine();
 
                 if(students.containsKey(userChoice)){
                     getStudentInfo(userChoice, students);
                 } else {
-                    System.out.println("Sorry, no student was found with the entered username.");
+                    System.out.println("Sorry, no student was found with the entered username.\n");
                 }
             } while(input.yesNo("Would you like to view information about another student? [y/n]\n"));
 
