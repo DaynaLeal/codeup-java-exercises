@@ -22,9 +22,9 @@ public class GradesApplication {
         chris.addGrade(96);
 
         HashMap<String, Student> students = new HashMap<>();
-        students.put("DaynaLeal", dayna);
+        students.put("DaynaL", dayna);
         students.put("BriVillaN", bri);
-        students.put("ChrisCyr", chris);
+        students.put("ChrisC", chris);
 
 
 
@@ -36,7 +36,8 @@ public class GradesApplication {
             Input input = new Input();
 
             do {
-                System.out.println("\nWhat student would you like to see more information on?\n" +
+                System.out.println(
+                        "\nWhat student would you like to see more information on?\n" +
                         "\n" +
                         "DaynaLeal\n" +
                         "BriVillaN\n" +
@@ -54,7 +55,7 @@ public class GradesApplication {
     }
 
     public static void getStudentInfo(String userChoice, HashMap<String, Student> students){
-        System.out.println("Name: " + students.get(userChoice).getName());
+        System.out.println("Student Name: " + students.get(userChoice).getName());
         System.out.println("Grades: " + students.get(userChoice).getGrades());
         System.out.println("Grade Average: " + students.get(userChoice).getGradeAverage() + "\n");
     }
