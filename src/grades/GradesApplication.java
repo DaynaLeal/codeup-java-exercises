@@ -42,9 +42,9 @@ public class GradesApplication {
                         "BriVillaN\n" +
                         "ChrisCyr\n");
                 String userChoice = scanner.nextLine();
-                    getStudentInfo(userChoice, students);
-                if(students.containsKey(userChoice)){
 
+                if(students.containsKey(userChoice)){
+                    getStudentInfo(userChoice, students);
                 } else {
                     System.out.println("Sorry, no student was found with the entered username.");
                 }
