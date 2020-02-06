@@ -31,6 +31,10 @@ public class Student {
     public void addGrade(int grade){
         grades.add(grade);
     }
+    //returns the student grades
+    public ArrayList<Integer> getGrades(){
+        return this.grades;
+    }
     // returns the average of the students grades
     public double getGradeAverage(){
         double gradeSize = grades.size();
