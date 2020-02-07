@@ -36,7 +36,7 @@ public class Input {
         int userInput = this.scanner.nextInt();
 
         if (userInput < min || userInput > max){
-            System.out.println("Please try again.");
+            System.out.println("Please try again. Enter a number between " + min + " and " + max + ": ");
             userInput = getInt(min, max);
         }
         return userInput;
@@ -53,7 +53,7 @@ public class Input {
         double userInput = this.scanner.nextDouble();
 
         if (userInput < min || userInput > max){
-            System.out.println("Please try again.");
+            System.out.println("Please try again. Enter a number between " + min + " and " + max + ": ");
             userInput = getDouble(min, max);
         }
         return userInput;
