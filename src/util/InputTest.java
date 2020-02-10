@@ -5,5 +5,6 @@ public class InputTest {
         Input input = new Input();
 //        input.getDouble(77, 77.7);
         System.out.println(input.yesNo("yes or no"));
+
     }
 }

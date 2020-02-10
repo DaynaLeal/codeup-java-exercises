@@ -43,4 +43,10 @@ public class javaPushups {
         }
         return secondArray;
     }
+
+    //write a java program that reads in a series of 3-5 lines and then writes them out to the console
+    public static String toConsole(String[] strings){
+
+        return strings;
+    }
 }
