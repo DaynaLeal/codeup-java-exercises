@@ -65,6 +65,9 @@ public class javaPushups {
 //then add to array
 //return array
 
+//    group id = org.example
+//    artifact id = DemoServlet
+
 }
 
 
