@@ -2,15 +2,25 @@ import java.util.Arrays;
 
 public class Practice2 {
   public static void main(String[] args){
-    System.out.println("Hello world");
+    // System.out.println("Hello world");
 
     // System.out.println(countTrue(testBoolArr)); //2
     // System.out.println(formatPhoneNumber(testIntArr)); // (123)456-7890
+
     // System.out.println(checkEnding(str1, str2)); //true
     // System.out.println(checkEndingStr(str1, str2)); //true
+
     // System.out.println(getWord("book", "ish")); //Bookish
-    System.out.println(discount(89, 20)); //71.2
-    System.out.println(programmers(147, 33, 526)); //493
+    // System.out.println(discount(89, 20)); //71.2
+    // System.out.println(programmers(147, 33, 526)); //493
+
+    System.out.println(getXO("zpzpzpp")); //true
+    System.out.println(getXO("zzoo")); //false
+    System.out.println(getXO("ooxXm")); //true
+    System.out.println(getXO("xooxx")); //false
+
+
+
   }
 
   public static boolean[] testBoolArr = {true, false, false, true, false};
@@ -61,7 +71,7 @@ public class Practice2 {
 		return total;
   }
   
-  
+
   //two refactors
   public static int programmers(int one, int two, int three) {
 		int[] arr = {one, two, three};
@@ -87,6 +97,22 @@ public class Practice2 {
 		int max = Math.max(Math.max(one, two), three);
 		int min = Math.min(Math.min(one, two), three);
 		return max - min;
-	}
+  }
+  
+
+  public static boolean getXO (String str) {
+		int xs = 0;
+		int os = 0;
+    char[] letters = str.toCharArray();
+    
+		for(char letter: letters){
+			if(letter == 'x' || letter == 'X'){
+				xs++;
+			} else if (letter == 'o' || letter == 'O'){
+				os++;
+			} 
+		}
+		return xs == os;
+  }
 
 }
