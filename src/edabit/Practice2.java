@@ -14,12 +14,13 @@ public class Practice2 {
     // System.out.println(discount(89, 20)); //71.2
     // System.out.println(programmers(147, 33, 526)); //493
 
-    System.out.println(getXO("zpzpzpp")); //true
-    System.out.println(getXO("zzoo")); //false
-    System.out.println(getXO("ooxXm")); //true
-    System.out.println(getXO("xooxx")); //false
+    // System.out.println(getXO("zpzpzpp")); //true
+    // System.out.println(getXO("zzoo")); //false
+    // System.out.println(getXO("ooxXm")); //true
+    // System.out.println(getXO("xooxx")); //false
 
-
+    System.out.println(isAvgWhole(testIntArr2));
+    System.out.println(isAvgWhole(testIntArr3));
 
   }
 
@@ -27,6 +28,8 @@ public class Practice2 {
   public static int[] testIntArr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
   public static String str1 = "book";
   public static String str2 = "ish";
+  public static int[] testIntArr2 = {1, 2, 3, 4};
+  public static int[] testIntArr3 = {9, 2, 2, 5};
 
   public static int countTrue(boolean[] arr) {
     int total = 0;
@@ -114,5 +117,18 @@ public class Practice2 {
 		}
 		return xs == os;
   }
+
+  public static int triangularNumSequence(int n) {
+		return (n * (n + 1))/2;
+  }
+
+  public static boolean isAvgWhole(int[] arr) {
+		double bucket = 0;
+		for(int num: arr){
+			bucket += num;
+		}
+		double avg = bucket / arr.length;
+		return avg == Math.round(avg);
+	}
 
 }
