@@ -19,8 +19,8 @@ public class Practice2 {
     // System.out.println(getXO("ooxXm")); //true
     // System.out.println(getXO("xooxx")); //false
 
-    System.out.println(isAvgWhole(testIntArr2));
-    System.out.println(isAvgWhole(testIntArr3));
+    System.out.println(isAvgWhole2(testIntArr2));
+    System.out.println(isAvgWhole2(testIntArr3));
 
   }
 
@@ -118,10 +118,12 @@ public class Practice2 {
 		return xs == os;
   }
 
+
   public static int triangularNumSequence(int n) {
 		return (n * (n + 1))/2;
   }
 
+  //one refactor
   public static boolean isAvgWhole(int[] arr) {
 		double bucket = 0;
 		for(int num: arr){
@@ -129,6 +131,16 @@ public class Practice2 {
 		}
 		double avg = bucket / arr.length;
 		return avg == Math.round(avg);
-	}
+  }
+  public static boolean isAvgWhole2(int[] arr) {
+		int sum = 0;
+		for (int n : arr) {
+			sum += n;
+		}
+		return sum % arr.length == 0;
+  }
+  
+
+  
 
 }
