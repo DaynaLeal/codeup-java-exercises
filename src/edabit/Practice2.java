@@ -146,7 +146,7 @@ public class Practice2 {
 		return total >= amountDue;
   }
   
-  
+
   public static String bomb(String str) {
 		str = str.toUpperCase();
 		if(str.contains("BOMB")){
@@ -157,6 +157,16 @@ public class Practice2 {
   }
   
 
-
+  public static String fizzBuzz(int n) {
+		if(n % 3 == 0 && n % 5 == 0){
+			return "FizzBuzz";
+		} else if (n % 3 == 0){
+			return "Fizz";
+		} else if (n % 5 == 0){
+			return "Buzz";
+		} else {
+			return Integer.toString(n);
+		}
+  }
 
 }
