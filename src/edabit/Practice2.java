@@ -141,6 +141,22 @@ public class Practice2 {
   }
   
 
+  public static boolean changeEnough(int[] change, double amountDue) {
+		double total = (change[0] * .25) + (change[1] * .1) + (change[2] * .05) + (change[3] * .01);
+		return total >= amountDue;
+  }
   
+  
+  public static String bomb(String str) {
+		str = str.toUpperCase();
+		if(str.contains("BOMB")){
+			return "DUCK!";
+		} else {
+			return "Relax, there's no bomb.";
+		}
+  }
+  
+
+
 
 }
