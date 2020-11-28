@@ -169,4 +169,31 @@ public class Practice2 {
 		}
   }
 
+
+  //with refactor
+  public static String reverse(final String str) {
+		char[] arr = str.toCharArray();
+		String reversed = "";
+    for(int i = arr.length - 1; i >= 0; i--){
+			reversed += arr[i];
+		}
+		return reversed;
+  }
+  public static String reverse2(final String str) {
+    return new StringBuilder(str).reverse().toString();
+  }
+
+  //with refactor
+  public static boolean isInOrder(String str){
+		char[] charArr = str.toCharArray();
+		Arrays.sort(charArr);
+		String sorted = new String(charArr);
+		return str.equals(sorted);
+  }
+  public static boolean isInOrder2(String str) {
+		String[] arr = str.split("");
+		java.util.Arrays.sort(arr);
+		return String.join("", arr).equals(str);
+  }
+
 }
