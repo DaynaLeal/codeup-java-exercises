@@ -196,4 +196,22 @@ public class Practice2 {
 		return String.join("", arr).equals(str);
   }
 
+  //with refactor
+  public static int[] numberSplit(int n) {
+		return new int[] {(int)Math.floor(n/2.0), (int)Math.ceil(n/2.0)};
+  }
+  public static int[] numberSplit2(int n) {
+		int[] arr = new int[2];
+		if(n%2==0){
+			arr[0]=n/2;
+			arr[1]=n/2;
+		}
+		else{
+			arr[0]=(n+1)/2;
+			arr[1]=n-arr[0];
+		}
+		Arrays.sort(arr);
+		return arr;
+	}
+
 }
