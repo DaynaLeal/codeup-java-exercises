@@ -212,6 +212,32 @@ public class Practice2 {
 		}
 		Arrays.sort(arr);
 		return arr;
+  }
+  
+
+  //Create a function that takes an array of integers, sums the even and odd numbers separately, then returns the difference between sum of even and odd numbers.
+  public static int warOfNumbers(int[]numbers){
+		int odds = 0;
+		int evens = 0;
+		for(int num: numbers){
+			if(num % 2 == 0){
+				evens += num;
+			} else {
+				odds += num;
+			}
+		}
+		return Math.abs(odds - evens);
+  }
+
+
+  public static int[][] squarePatch(int n) {
+		int[][] finalArray = new int[n][n];
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				finalArray[i][j] = n;
+			}
+		}
+		return finalArray;
 	}
 
 }
