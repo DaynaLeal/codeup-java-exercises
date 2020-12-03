@@ -238,6 +238,17 @@ public class Practice2 {
 			}
 		}
 		return finalArray;
+  }
+  
+
+  public static String rps(String s1, String s2) {
+		if(s1.equals(s2)){
+			return "TIE";
+		} else if((s1.equals("rock") && s2.equals("scissors"))||(s1.equals("scissors") && s2.equals("paper"))||(s1.equals("paper") && s2.equals("rock"))){
+			return "Player 1 wins";
+		} else {
+			return "Player 2 wins";
+		}
 	}
 
 }
