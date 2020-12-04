@@ -241,7 +241,7 @@ public class Practice2 {
   }
   
 
-  public static String rps(String s1, String s2) {
+  public static String rockPaperScissors(String s1, String s2) {
 		if(s1.equals(s2)){
 			return "TIE";
 		} else if((s1.equals("rock") && s2.equals("scissors"))||(s1.equals("scissors") && s2.equals("paper"))||(s1.equals("paper") && s2.equals("rock"))){
@@ -249,6 +249,11 @@ public class Practice2 {
 		} else {
 			return "Player 2 wins";
 		}
-	}
+  }
+  
+
+  public static int emptySq(int step) {
+		return 4*step*(step-1);
+  }
 
 }
