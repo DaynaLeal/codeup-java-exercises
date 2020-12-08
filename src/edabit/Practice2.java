@@ -256,4 +256,12 @@ public class Practice2 {
 		return 4*step*(step-1);
   }
 
+
+  public static String tpChecker(int people, int tp) {
+    if ((tp * 500)/(people * 57) >= 14){
+      return "Your TP will last " + (tp * 500)/(people * 57) + " days, no need to panic!";
+    } else{
+      return "Your TP will only last " + (tp * 500)/(people * 57) + " days, buy more!";
+    }
+
 }
